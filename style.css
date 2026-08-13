@@ -1,0 +1,920 @@
+/* ============================================
+   STYLE - NANA TECHNOLOGIE
+   IDENTITÉ VISUELLE : BLEU #0232ff (LOGO)
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1A1A2E;
+    background: #F0F4FF;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ---------- COULEURS ---------- */
+:root {
+    --bleu-logo: #0232ff;
+    --bleu-fonce: #001a99;
+    --blanc: #FFFFFF;
+    --fond-clair: #F0F4FF;
+    --gris-clair: #E4E9F5;
+    --texte-fonce: #1A1A2E;
+    --texte-gris: #6B6B80;
+    --shadow: 0 4px 20px rgba(2, 50, 255, 0.12);
+    --radius: 12px;
+}
+
+/* ---------- BOUTONS ---------- */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: var(--bleu-logo);
+    color: var(--blanc);
+}
+.btn-primary:hover {
+    background: var(--bleu-fonce);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(2, 50, 255, 0.35);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--bleu-logo);
+    border: 2px solid var(--bleu-logo);
+}
+.btn-secondary:hover {
+    background: var(--bleu-logo);
+    color: var(--blanc);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+header {
+    background: var(--bleu-logo);
+    padding: 0.8rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--blanc);
+    letter-spacing: 1px;
+}
+
+.logo-slogan {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.8rem;
+    align-items: center;
+}
+
+nav a {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s;
+    padding: 0.4rem 0;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--blanc);
+    border-bottom-color: var(--blanc);
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+    background: var(--bleu-logo);
+    padding: 5rem 0 4rem;
+    text-align: center;
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-inner {
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 0.3rem;
+    letter-spacing: 3px;
+    color: var(--blanc);
+}
+
+.hero-slogan {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.hero-description {
+    max-width: 700px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 auto 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero .btn-secondary {
+    color: var(--blanc);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+.hero .btn-secondary:hover {
+    background: var(--blanc);
+    color: var(--bleu-logo);
+    border-color: var(--blanc);
+}
+
+.hero-formation {
+    min-height: 350px;
+}
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+.section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--texte-fonce);
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--bleu-logo);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+.bg-white {
+    background: var(--blanc);
+}
+
+.bg-light {
+    background: var(--fond-clair);
+}
+
+/* ============================================
+   À PROPOS
+   ============================================ */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.about-text p {
+    color: var(--texte-gris);
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+.about-text strong {
+    color: var(--bleu-logo);
+}
+
+.about-values {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.value-card {
+    background: var(--blanc);
+    padding: 1.5rem 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--bleu-logo);
+}
+
+.value-card h3 {
+    color: var(--bleu-logo);
+    margin-bottom: 0.3rem;
+}
+
+.value-card p {
+    color: var(--texte-gris);
+}
+
+/* ============================================
+   SERVICES - 3 KOLONN SOU ÒDINATÈ
+   ============================================ */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.service-card {
+    background: var(--blanc);
+    padding: 1.8rem 1.2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(2, 50, 255, 0.06);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(2, 50, 255, 0.15);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.service-card h3 {
+    color: var(--bleu-logo);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.service-card p {
+    color: var(--texte-gris);
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   STATS
+   ============================================ */
+.stats {
+    background: var(--bleu-logo);
+    padding: 3rem 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--blanc);
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ============================================
+   FORMATIONS
+   ============================================ */
+.formation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+}
+
+.formation-card {
+    background: var(--blanc);
+    padding: 1.8rem 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 4px solid var(--bleu-logo);
+}
+
+.formation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(2, 50, 255, 0.15);
+}
+
+.formation-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.formation-card h3 {
+    font-size: 1.1rem;
+    color: var(--bleu-logo);
+    margin-bottom: 0.6rem;
+    min-height: 3rem;
+}
+
+.formation-card p {
+    color: var(--texte-gris);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.formation-meta {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+}
+
+.formation-duree {
+    background: var(--fond-clair);
+    padding: 0.2rem 0.8rem;
+    border-radius: 50px;
+    color: var(--texte-fonce);
+}
+
+.formation-type {
+    background: var(--bleu-logo);
+    padding: 0.2rem 0.8rem;
+    border-radius: 50px;
+    color: var(--blanc);
+}
+
+/* ============================================
+   CONTACT
+   ============================================ */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.contact-info p {
+    padding: 0.8rem 0;
+    font-size: 1.05rem;
+    color: var(--texte-gris);
+    border-bottom: 1px solid var(--gris-clair);
+}
+
+.contact-info p:last-child {
+    border-bottom: none;
+}
+
+.contact-info a {
+    color: var(--bleu-logo);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: var(--bleu-fonce);
+    text-decoration: underline;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--gris-clair);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: var(--blanc);
+    color: var(--texte-fonce);
+    transition: border 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--bleu-logo);
+    box-shadow: 0 0 0 3px rgba(2, 50, 255, 0.1);
+}
+
+.contact-form .btn {
+    width: 100%;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    background: var(--bleu-logo);
+    padding: 2.5rem 0 1.5rem;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.footer-logo h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--blanc);
+}
+
+.footer-logo p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.3s;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: var(--blanc);
+}
+
+.footer-copy {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+/* ---- Tablettes (768px - 992px) ---- */
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+
+    .formation-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---- Téléphones (moins de 768px) ---- */
+@media (max-width: 768px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+        padding: 0.5rem 0;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem 1.2rem;
+        padding: 0.3rem 0;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.2rem;
+    }
+
+    .hero {
+        min-height: 350px;
+        padding: 3rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-slogan {
+        font-size: 1.1rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        padding: 0 0.5rem;
+    }
+
+    .hero-buttons .btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* SERVICES: 2 kolonn sou mobile */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .service-card {
+        padding: 1.2rem 1rem;
+    }
+
+    .service-card h3 {
+        font-size: 0.95rem;
+    }
+
+    .service-card p {
+        font-size: 0.85rem;
+    }
+
+    .service-icon {
+        font-size: 2rem;
+    }
+
+    .formation-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .formation-card {
+        padding: 1.2rem;
+    }
+
+    .formation-card h3 {
+        min-height: auto;
+        font-size: 1rem;
+    }
+
+    .about-text p {
+        font-size: 0.95rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .stat-number {
+        font-size: 2.2rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contact-info p {
+        font-size: 0.95rem;
+        padding: 0.6rem 0;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.7rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .contact-form .btn {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* ---- Ti telefòn (mwens pase 480px) ---- */
+@media (max-width: 480px) {
+    .header-inner {
+        gap: 0.5rem;
+    }
+
+    nav ul {
+        gap: 0.5rem 0.8rem;
+    }
+
+    nav a {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.1rem;
+    }
+
+    .logo-name {
+        font-size: 0.95rem;
+    }
+
+    .logo-slogan {
+        font-size: 0.55rem;
+    }
+
+    .logo-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero {
+        min-height: 300px;
+        padding: 2rem 0;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-slogan {
+        font-size: 0.95rem;
+    }
+
+    .hero-description {
+        font-size: 0.85rem;
+        padding: 0 0.3rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.7rem;
+    }
+
+    .hero-buttons .btn {
+        display: block;
+        width: 90%;
+        max-width: 280px;
+        text-align: center;
+        padding: 0.7rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    /* SERVICES: 1 sel kolonn sou ti telefòn */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .service-card {
+        padding: 1rem 0.8rem;
+    }
+
+    .service-card h3 {
+        font-size: 1rem;
+    }
+
+    .service-card p {
+        font-size: 0.85rem;
+    }
+
+    .service-icon {
+        font-size: 2.2rem;
+    }
+
+    .formation-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .formation-card {
+        padding: 1rem;
+    }
+
+    .formation-card h3 {
+        font-size: 0.95rem;
+        min-height: auto;
+    }
+
+    .formation-card p {
+        font-size: 0.85rem;
+    }
+
+    .formation-meta {
+        gap: 0.8rem;
+        font-size: 0.75rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-title::after {
+        width: 40px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+
+    .value-card {
+        padding: 1rem 1.2rem;
+    }
+
+    .value-card h3 {
+        font-size: 1rem;
+    }
+
+    .value-card p {
+        font-size: 0.9rem;
+    }
+
+    .footer-links {
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .footer-links a {
+        font-size: 0.8rem;
+    }
+
+    .footer-logo h3 {
+        font-size: 1.1rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .contact-info p {
+        font-size: 0.85rem;
+        padding: 0.5rem 0;
+        word-break: break-word;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .contact-form .btn {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ---- Telefòn trè piti (mwens pase 360px) ---- */
+@media (max-width: 360px) {
+    .logo-name {
+        font-size: 0.8rem;
+    }
+
+    .logo-slogan {
+        font-size: 0.5rem;
+    }
+
+    .logo-img {
+        width: 35px;
+        height: 35px;
+    }
+
+    nav a {
+        font-size: 0.65rem;
+        padding: 0.15rem 0.05rem;
+    }
+
+    nav ul {
+        gap: 0.3rem 0.6rem;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-slogan {
+        font-size: 0.8rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .contact-info p {
+        font-size: 0.8rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.7rem;
+    }
+
+    .service-card {
+        padding: 0.8rem 0.6rem;
+    }
+
+    .service-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .service-card p {
+        font-size: 0.8rem;
+    }
+
+    .service-icon {
+        font-size: 1.8rem;
+    }
+}
