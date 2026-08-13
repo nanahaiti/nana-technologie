@@ -95,6 +95,7 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    flex-wrap: nowrap;
 }
 
 /* ===== LOGO ===== */
@@ -105,8 +106,8 @@ header {
 }
 
 .logo-img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
     display: block;
 }
@@ -139,10 +140,26 @@ nav a.active {
 }
 
 /* ============================================
-   RESPONSIVE - TELEFÒN
+   RESPONSIVE - TOUT EKRAN
    ============================================ */
 
-/* Telefòn (768px) - Logo ak menu sou menm liy */
+/* Tablette */
+@media (max-width: 992px) {
+    .logo-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    nav ul {
+        gap: 1.5rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+}
+
+/* Telefòn (768px) */
 @media (max-width: 768px) {
     .header-inner {
         display: flex;
@@ -153,8 +170,8 @@ nav a.active {
     }
 
     .logo-img {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
     }
 
     nav ul {
@@ -162,12 +179,12 @@ nav a.active {
     }
 
     nav a {
-        font-size: 0.85rem;
-        padding: 0.3rem 0;
+        font-size: 0.8rem;
+        padding: 0.2rem 0;
     }
 }
 
-/* Ti telefòn (480px) - Toujou sou menm liy */
+/* Ti telefòn (480px) */
 @media (max-width: 480px) {
     .header-inner {
         display: flex;
@@ -178,8 +195,8 @@ nav a.active {
     }
 
     .logo-img {
-        width: 55px;
-        height: 55px;
+        width: 50px;
+        height: 50px;
     }
 
     nav ul {
@@ -195,8 +212,8 @@ nav a.active {
 /* Telefòn trè piti (360px) */
 @media (max-width: 360px) {
     .logo-img {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
     }
 
     nav ul {
