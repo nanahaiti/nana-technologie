@@ -1,6 +1,6 @@
 /* ============================================
    STYLE - NANA TECHNOLOGIE
-   IDENTITÉ VISUELLE : BLEU #0232ff (LOGO)
+   HEADER BLAN - LOGO NANA BLEU
    ============================================ */
 
 * {
@@ -31,7 +31,9 @@ ul {
     padding: 0 20px;
 }
 
-/* COULEURS */
+/* ============================================
+   COULEURS
+   ============================================ */
 :root {
     --bleu-logo: #0232ff;
     --bleu-fonce: #001a99;
@@ -44,7 +46,9 @@ ul {
     --radius: 12px;
 }
 
-/* BOUTONS */
+/* ============================================
+   BOUTONS
+   ============================================ */
 .btn {
     display: inline-block;
     padding: 0.8rem 2rem;
@@ -78,14 +82,15 @@ ul {
 }
 
 /* ============================================
-   HEADER - LOGO RESPONSIVE
+   HEADER - BLAN AVEC LOGO NANA
    ============================================ */
 header {
-    background: var(--bleu-logo);
+    background: var(--blanc);
     padding: 0.8rem 0;
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .header-inner {
@@ -96,7 +101,7 @@ header {
     gap: 0.5rem;
 }
 
-/* ===== LOGO ===== */
+/* ===== LOGO NANA ===== */
 .logo {
     display: flex;
     align-items: center;
@@ -118,14 +123,14 @@ header {
 .logo-name {
     font-size: 1.2rem;
     font-weight: 700;
-    color: var(--blanc);
+    color: var(--bleu-logo);
     letter-spacing: 1px;
     line-height: 1.2;
 }
 
 .logo-slogan {
     font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--texte-gris);
     letter-spacing: 1px;
 }
 
@@ -139,7 +144,7 @@ nav ul {
 nav a {
     font-weight: 500;
     font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--texte-gris);
     transition: color 0.3s;
     padding: 0.4rem 0;
     border-bottom: 2px solid transparent;
@@ -147,8 +152,8 @@ nav a {
 
 nav a:hover,
 nav a.active {
-    color: var(--blanc);
-    border-bottom-color: var(--blanc);
+    color: var(--bleu-logo);
+    border-bottom-color: var(--bleu-logo);
 }
 
 /* ============================================
@@ -529,10 +534,10 @@ footer {
 }
 
 /* ============================================
-   RESPONSIVE - TOUT EKRAN
+   RESPONSIVE
    ============================================ */
 
-/* ---- Tablettes (992px) ---- */
+/* Tablettes */
 @media (max-width: 992px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -556,9 +561,8 @@ footer {
     }
 }
 
-/* ---- Telefòn (768px) ---- */
+/* Telefòn */
 @media (max-width: 768px) {
-    /* HEADER */
     .header-inner {
         flex-direction: column;
         align-items: center;
@@ -587,7 +591,6 @@ footer {
         padding: 0.3rem 0.2rem;
     }
 
-    /* HERO */
     .hero {
         min-height: 350px;
         padding: 3rem 0;
@@ -611,7 +614,6 @@ footer {
         font-size: 0.9rem;
     }
 
-    /* SERVICES - 2 kolonn sou mobile */
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
@@ -633,7 +635,6 @@ footer {
         font-size: 2rem;
     }
 
-    /* FORMATIONS - 1 kolonn sou mobile */
     .formation-grid {
         grid-template-columns: 1fr;
         gap: 1.2rem;
@@ -648,12 +649,10 @@ footer {
         font-size: 1rem;
     }
 
-    /* À PROPOS */
     .about-text p {
         font-size: 0.95rem;
     }
 
-    /* STATS */
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
@@ -663,7 +662,6 @@ footer {
         font-size: 2.2rem;
     }
 
-    /* CONTACT */
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -686,13 +684,12 @@ footer {
         font-size: 1rem;
     }
 
-    /* SECTION TITLE */
     .section-title {
         font-size: 1.8rem;
     }
 }
 
-/* ---- Ti telefòn (480px) ---- */
+/* Ti telefòn */
 @media (max-width: 480px) {
     .header-inner {
         gap: 0.5rem;
@@ -753,7 +750,6 @@ footer {
         font-size: 0.85rem;
     }
 
-    /* SERVICES - 1 kolonn sou ti telefòn */
     .services-grid {
         grid-template-columns: 1fr;
         gap: 0.8rem;
@@ -775,7 +771,6 @@ footer {
         font-size: 2.2rem;
     }
 
-    /* FORMATIONS - 1 kolonn */
     .formation-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
@@ -799,7 +794,6 @@ footer {
         font-size: 0.75rem;
     }
 
-    /* SECTION TITLE */
     .section-title {
         font-size: 1.5rem;
     }
@@ -808,7 +802,6 @@ footer {
         width: 40px;
     }
 
-    /* STATS */
     .stats-grid {
         grid-template-columns: 1fr 1fr;
         gap: 0.8rem;
@@ -822,7 +815,6 @@ footer {
         font-size: 0.8rem;
     }
 
-    /* À PROPOS */
     .value-card {
         padding: 1rem 1.2rem;
     }
@@ -835,7 +827,6 @@ footer {
         font-size: 0.9rem;
     }
 
-    /* FOOTER */
     .footer-links {
         gap: 1rem;
         justify-content: center;
@@ -849,14 +840,12 @@ footer {
         font-size: 1.1rem;
     }
 
-    /* BOUTONS */
     .btn-primary,
     .btn-secondary {
         padding: 0.6rem 1.2rem;
         font-size: 0.85rem;
     }
 
-    /* CONTACT */
     .contact-info p {
         font-size: 0.85rem;
         padding: 0.5rem 0;
@@ -875,7 +864,7 @@ footer {
     }
 }
 
-/* ---- Telefòn trè piti (360px) ---- */
+/* Telefòn trè piti */
 @media (max-width: 360px) {
     .logo-name {
         font-size: 0.8rem;
